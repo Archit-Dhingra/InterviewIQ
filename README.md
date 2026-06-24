@@ -50,7 +50,7 @@ The platform generates interview questions based on the user's resume, conducts 
 ### Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/InterviewIQ.git
+git clone https://github.com/Archit-Dhingra/InterviewIQ.git
 cd InterviewIQ
 ```
 
