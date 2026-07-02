@@ -72,7 +72,8 @@ function Step2Interview({ interviewData, onFinish }) {
     window.speechSynthesis.onvoiceschanged = loadVoices;
   }, []);
 
-  const videoSource = voiceGender === "male" ? maleVideo : femaleVideo;
+  // const videoSource = voiceGender === "male" ? maleVideo : femaleVideo;
+    const videoSource = femaleVideo;  
 
   const speakText = (text) => {
     return new Promise((resolve) => {
