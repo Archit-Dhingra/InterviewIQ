@@ -41,7 +41,7 @@ export const analyzeResume = async (req, res) => {
 
                 {
                     "role" : "string",
-                    "expreience" : "string",
+                    "experience" : "string",
                     "projects" : ["project1, "project2],
                     "skills" : ["skill1", "skill2"]
                 }
@@ -341,7 +341,7 @@ export const finishInterview = async (req, res) => {
 
         const avgConfidence = totalQuestions ? totalConfidence / totalQuestions : 0;
         
-        const avgCommunication = totalQuestions ? totalConfidence / totalQuestions : 0;
+        const avgCommunication = totalQuestions ? totalCommunication / totalQuestions : 0;
 
         const avgCorrectness = totalQuestions ? totalCorrectness / totalQuestions : 0;
 
