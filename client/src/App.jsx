@@ -10,8 +10,12 @@ import InterviewPage from './pages/InterviewPage'
 import InterviewHistory from './pages/InterviewHistory'
 import Pricing from './pages/Pricing'
 import InterviewReport from './pages/InterviewReport'
-
-export const ServerUrl  = import.meta.env.VITE_SERVER_URL
+const envServerUrl = import.meta.env.VITE_SERVER_URL || "";
+const isLocalhost = typeof window !== "undefined" && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
+const rawServerUrl = (isLocalhost && (!envServerUrl || envServerUrl.includes("onrender.com")))
+  ? "http://localhost:8000/"
+  : envServerUrl;
+export const ServerUrl = rawServerUrl ? (rawServerUrl.endsWith("/") ? rawServerUrl : `${rawServerUrl}/`) : "";
 
 function App() {
 
